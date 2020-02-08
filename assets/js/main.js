@@ -91,8 +91,8 @@
 
 	};
 
-	// Play initial animations on page load.
-		$window.on('load', function() {
+	// Play initial animations on initial html parse - without waiting for all elements to load.
+		$window.on('DOMContentLoaded', function() {
 			window.setTimeout(function() {
 				$body.removeClass('is-preload');
 			}, 100);
